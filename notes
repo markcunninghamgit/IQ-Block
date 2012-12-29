@@ -1,0 +1,128 @@
+64 blocks
+
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+* * * * * * * * 
+
+first round
+[1][1] = (1,2,3,4,5,6,7,8)
+
+= Colours =
+yellow
+pink
+orange
+dark purple
+light purple
+light green
+dark green
+blue
+
+how to express formation:
+
+order of colors
+order of rotation. First blank spot indicates what block you're describing
+black spots are taken from top-> bottom then left to right. 
+(ie, we go down the whole left line first, then go back to the top and take the second line down)
+
+
+Color default rotations + side
+rotates start like this as 1. they go up to 3 by clockwise rotation
+side 1 or 2
+
+the point we draw from is the one that would be hit first.
+Given the rotation, we take the very left left lane and take the top
+block from that lane
+
+blue:
+* *
+* * *
+* * *
+sides:false
+rotations:4
+
+yellow
+* *
+* *
+* * * *
+sides:true
+rotations:4
+
+light purple
+*   *
+*   *
+* * *
+sides:false
+rotations:4
+
+
+dark purple
+  * *
+  * *
+* * * *
+sides:false
+rotations:4
+
+light green
+* *
+* *
+  * *
+  * *
+sides:true
+rotations:2
+
+
+dark green
+  *
+  *
+* * *
+* * *
+sides:true
+rotations:4
+
+
+
+
+orange
+* * * *
+* * * *
+sides:false
+rotations:2
+
+pink
+    * * *
+* * * * *
+sides:true
+rotations:4
+
+
+
+(colour,rotation,side)
+light purple,2,na
+orange,2,na
+light green,3,1
+dark purple,2,na
+dark green,2,1
+pink,1,1
+blue,2,na
+yellow,3,1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
