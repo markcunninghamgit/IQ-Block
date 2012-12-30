@@ -33,6 +33,15 @@ function rotateColour($colour,$timesToRotate=1)
 	return $colour;
 }
 
+
+/*
+	regardless of simplicity, it's easier to understand a call to flipColour compared to array_reverse when used
+*/
+function flipColour($colour)
+{
+	return array_reverse($colour);
+}
+
 function printColour($colour)
 {
 	//echo "starting to draw colour\n";
