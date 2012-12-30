@@ -20,62 +20,65 @@
 
 
 	$yellow = array(
-		array(1,1,0,0),
-		array(1,1,0,0),
-		array(1,1,0,0),
-		array(1,1,1,1)
+		array(2,2,0,0),
+		array(2,2,0,0),
+		array(2,2,0,0),
+		array(2,2,2,2)
 		);
 
 
 	$lightPurple = array(
-		array(1,0,0,1),
-		array(1,0,0,1),
-		array(1,0,0,1),
-		array(1,1,1,1)
+		array(3,0,0,3),
+		array(3,0,0,3),
+		array(3,3,3,3)
 		);
 
 
 
 	$darkPurple = array(
-		array(0,1,1,0),
-		array(0,1,1,0),
-		array(0,1,1,0),
-		array(1,1,1,1)
+		array(0,4,4,0),
+		array(0,4,4,0),
+		array(0,4,4,0),
+		array(4,4,4,4)
 		);
 
 
+//old
+	$lightGreen = array(
+		array(5,5,0,0),
+		array(5,5,0,0),
+		array(0,0,5,5),
+		array(0,0,5,5)
+		);
 
 	$lightGreen = array(
-		array(1,1,0,0),
-		array(1,1,0,0),
-		array(0,0,1,1),
-		array(0,0,1,1)
+		array(0,0,5,5),
+		array(5,5,5,5),
+		array(5,5,0,0)
 		);
-
-
 
 
 	$darkGreen = array(
-		array(0,1,0),
-		array(0,1,0),
-		array(1,1,1),
-		array(1,1,1)
+		array(0,6,0),
+		array(0,6,0),
+		array(6,6,6),
+		array(6,6,6)
 		);
 
 
 
 
 	$orange = array(
-		array(1,1,1,1),
-		array(1,1,1,1)
+		array(7,7,7,7),
+		array(7,7,7,7)
 		);
 
 
 
 
 	$pink = array(
-		array(0,0,1,1,1),
-		array(1,1,1,1,1)
+		array(0,0,8,8,8),
+		array(8,8,8,8,8)
 		);
 
 
