@@ -112,6 +112,14 @@ yellow,3,1
 
 
 
+42 different possible shape positions/flips etc
+
+42^8 (9682651996416) maximum possible combinations
+
+technically it's less... it's 42*(some reduced value)* etc. where we take away each possible shape combinations. i'm too lazy to write that out
+
+advantage of being as soon as a shape doesn't fit, we can skip all other combinations of shapes in other positions.
+
 
 
 
