@@ -22,7 +22,6 @@
 	$yellow = array(
 		array(2,2,0,0),
 		array(2,2,0,0),
-		array(2,2,0,0),
 		array(2,2,2,2)
 		);
 
@@ -36,7 +35,6 @@
 
 
 	$darkPurple = array(
-		array(0,4,4,0),
 		array(0,4,4,0),
 		array(0,4,4,0),
 		array(4,4,4,4)
