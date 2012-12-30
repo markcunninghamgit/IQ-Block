@@ -21,6 +21,34 @@ $myBlock = addShape($myBlock,$colour);
 printBlock($myBlock);
 
 
+$colour = rotateColour($darkPurple,1);
+$myBlock = addShape($myBlock,$colour);
+printBlock($myBlock);
+
+$colour = rotateColour($darkGreen,1);
+$myBlock = addShape($myBlock,$colour);
+printBlock($myBlock);
+
+
+$colour = rotateColour($pink,0);
+$myBlock = addShape($myBlock,$colour);
+printBlock($myBlock);
+
+
+$colour = rotateColour($blue,1);
+$myBlock = addShape($myBlock,$colour);
+printBlock($myBlock);
+
+
+
+
+$colour = rotateColour($yellow,3);
+$myBlock = addShape($myBlock,$colour);
+printBlock($myBlock);
+
+
+
+
 
 
 
@@ -64,10 +92,9 @@ function addShape($block,$shape)
 			$blockI = $freeSlot[0] - $startingShapePoint[0] + $i;
 			$blockJ = $freeSlot[1] + $j;
 			//Check if shape is trying to be placed outside of block bounds
-			if (($blockI > 7 or $blockI < 0) or ($blockJ > 7 or $blockJ <0))
+			if (($blockI > 8 or $blockI < 0) or ($blockJ > 8 or $blockJ <0))
 			{
-				echo "shape outside of block bounds, failied to add shape\n";
-				return -1;
+				throw new Exception (" shape outside of block bounds, failied to add shape");
 			}
 			
 			//Block pos is empty? Place the square
@@ -77,8 +104,8 @@ function addShape($block,$shape)
 			}
 			else
 			{
-				echo "block spot is taken\n";
-				return -1;
+				throw new Exception ("block spot is taken, cannot add shape here. there is an" . $block[$blockI][$blockJ]  . "here " 
+				. "Loc, i:$i, j: $j");
 			}
 		}
 	}
@@ -156,6 +183,7 @@ function printBlock($blockToPrint)
 					break;
 
 				case 1:
+					echo "\033[0;34m";
 					break;
 
 				case 2:
