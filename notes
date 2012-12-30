@@ -9,8 +9,6 @@
 * * * * * * * * 
 * * * * * * * * 
 
-first round
-[1][1] = (1,2,3,4,5,6,7,8)
 
 = Colours =
 yellow
@@ -26,7 +24,7 @@ how to express formation:
 
 order of colours
 order of rotation. First blank spot indicates what block you're describing
-black spots are taken from top-> bottom then left to right. 
+black spots are taken from left-> right thentop-> bottom. 
 (ie, we go down the whole left line first, then go back to the top and take the second line down)
 
 

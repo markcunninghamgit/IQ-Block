@@ -1,0 +1,13 @@
+IQ-Block
+
+I've got an IQ Block from great gizmos for christmas. My shapse are a bit different to other peoples. So far the only one i've found that's the same as mine is
+in here http://www.youtube.com/watch?v=Djz_tBJ0o8w
+
+
+Basic idea is to find as many combinations of the include shapes to fit together to make a perfect square.
+
+I'm not coding this atm for public uses so the notes and such are all meant for me.
+
+I've come up with a method of storing the shapes in their order (roughly recoded in the notes file) and 
+a php script to draw it out. once i get this completely down i'll just brute force all the possible 
+combinations and get out a nice list of all solutions to the puzzle.
