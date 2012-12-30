@@ -24,13 +24,13 @@ blue
 
 how to express formation:
 
-order of colors
+order of colours
 order of rotation. First blank spot indicates what block you're describing
 black spots are taken from top-> bottom then left to right. 
 (ie, we go down the whole left line first, then go back to the top and take the second line down)
 
 
-Color default rotations + side
+Colour default rotations + side
 rotates start like this as 1. they go up to 3 by clockwise rotation
 side 1 or 2
 
