@@ -9,9 +9,9 @@
 		array(0,0,0,0)
 		);
 
+$colourDB = array();
 
-
-	$blue = array(
+	$colourDB["blue"] = array(
 		array(1,1,0),
 		array(1,1,1),
 		array(1,1,1)
@@ -19,14 +19,14 @@
 
 
 
-	$yellow = array(
+	$colourDB["yellow"] = array(
 		array(2,2,0,0),
 		array(2,2,0,0),
 		array(2,2,2,2)
 		);
 
 
-	$lightPurple = array(
+	$colourDB["lightPurple"] = array(
 		array(3,0,0,3),
 		array(3,0,0,3),
 		array(3,3,3,3)
@@ -34,7 +34,7 @@
 
 
 
-	$darkPurple = array(
+	$colourDB["darkPurple"] = array(
 		array(0,4,4,0),
 		array(0,4,4,0),
 		array(4,4,4,4)
@@ -42,21 +42,21 @@
 
 
 //old
-	$lightGreen = array(
+	$colourDB["lightGreen"] = array(
 		array(5,5,0,0),
 		array(5,5,0,0),
 		array(0,0,5,5),
 		array(0,0,5,5)
 		);
 
-	$lightGreen = array(
+	$colourDB["lightGreen"] = array(
 		array(0,0,5,5),
 		array(5,5,5,5),
 		array(5,5,0,0)
 		);
 
 
-	$darkGreen = array(
+	$colourDB["darkGreen"] = array(
 		array(0,6,0),
 		array(0,6,0),
 		array(6,6,6),
@@ -66,7 +66,7 @@
 
 
 
-	$orange = array(
+	$colourDB["orange"] = array(
 		array(7,7,7,7),
 		array(7,7,7,7)
 		);
@@ -74,7 +74,7 @@
 
 
 
-	$pink = array(
+	$colourDB["pink"] = array(
 		array(0,0,8,8,8),
 		array(8,8,8,8,8)
 		);
