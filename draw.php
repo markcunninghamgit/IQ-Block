@@ -3,6 +3,9 @@ include_once "colours.php";
 include_once "colourFunctions.php";
 $myBlock = blankBlock();
 
+//positions to cycle through for brute forcing solution
+$slots = array(0,0,0,0,0,0,0,0);
+
 
 printBlock($myBlock);
 
