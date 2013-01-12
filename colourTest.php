@@ -14,7 +14,7 @@ foreach ($colourDB as $colourName => $colour)
 		$duplicateID = array_search($jsonColour,$allColoursJson);
 		if ($duplicateID === false)
 		{
-			$allColoursUnique["c-$colourName-r$i-f-n"] = rotateColour($colour,$i);
+			$allColoursUnique["c-$colourName-r$i-f-n"] = array("colour" => $colourName, "shape" =>  rotateColour($colour,$i));
 			$allColoursJson["c-$colourName-r$i-f-n"] = $jsonColour;
 		}
 		else
@@ -32,7 +32,7 @@ foreach ($colourDB as $colourName => $colour)
 		$duplicateID = array_search($jsonColour,$allColoursJson);
 		if ($duplicateID === false)
 		{
-			$allColoursUnique["c-$colourName-r$i-f-y"] = rotateColour($colour,$i);
+			$allColoursUnique["c-$colourName-r$i-f-y"] =  array("colour" => $colourName, "shape" => rotateColour($colour,$i));
 			$allColoursJson["c-$colourName-r$i-f-y"] = $jsonColour;
 		}
 		else
