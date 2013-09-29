@@ -11,3 +11,16 @@ I'm not coding this atm for public uses so the notes and such are all meant for 
 I've come up with a method of storing the shapes in their order (roughly recoded in the notes file) and 
 a php script to draw it out. once i get this completely down i'll just brute force all the possible 
 combinations and get out a nice list of all solutions to the puzzle.
+
+
+rename colours.orig.php to colours.php (and move the one that's there to something else) for the original set of colours/shapes that
+is seen in the youtube video
+
+the current colours.php uses shapes from http://www.prismenfernglas.de/iqblock_e.htm
+	Unfortunately as they use 10 shapes, having 2 digit outputs for the character slots stops it lining up right so i made it output the letter X 
+	colourised however the colours aren't that easy to tell apart
+
+
+RUN: php drawTest.php in terminal
+
+note: there's probably duplicates as you could rotate everything 90 degrees 3 times.

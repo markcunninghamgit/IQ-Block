@@ -238,9 +238,17 @@ function printBlock($blockToPrint)
 				case 8:
 					echo "\033[1;31m";
 					break;
-			}
+	
+				case 9:
+					echo "\033[1;36m";
+					break;
 			
-			echo $blockToPrint[$i][$j]. " ";
+				case 10:
+					echo "\033[1;37m";
+					break;
+			}
+					
+			echo "x" /*$blockToPrint[$i][$j]*/. " ";
 			echo "\033[00m";
 		}
 		echo "\r\n";

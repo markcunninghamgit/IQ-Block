@@ -11,8 +11,6 @@
 
 $colourDB = array();
 
-
-//5
 	$colourDB["blue"] = array(
 		array(1,1,0),
 		array(1,1,1),
@@ -20,43 +18,54 @@ $colourDB = array();
 		);
 
 
-//1
+
 	$colourDB["yellow"] = array(
 		array(2,2,0,0),
 		array(2,2,0,0),
 		array(2,2,2,2)
 		);
 
-//2
+
 	$colourDB["lightPurple"] = array(
-		array(3,3,3,3),
-		array(3,3,0,0)
+		array(3,0,0,3),
+		array(3,0,0,3),
+		array(3,3,3,3)
 		);
 
 
-//3
+
 	$colourDB["darkPurple"] = array(
-		array(4,4,4),
-		array(4,0,0),
-		array(4,0,0),
-		array(4,0,0)
+		array(0,4,4,0),
+		array(0,4,4,0),
+		array(4,4,4,4)
 		);
 
-//4
+
+//old
 	$colourDB["lightGreen"] = array(
-		array(5,5),
-		array(5,0),
-		array(5,0)
+		array(5,5,0,0),
+		array(5,5,0,0),
+		array(0,0,5,5),
+		array(0,0,5,5)
 		);
 
-//6
+	$colourDB["lightGreen"] = array(
+		array(0,0,5,5),
+		array(5,5,5,5),
+		array(5,5,0,0)
+		);
+
+
 	$colourDB["darkGreen"] = array(
-		array(0,6,6),
+		array(0,6,0),
+		array(0,6,0),
+		array(6,6,6),
 		array(6,6,6)
 		);
 
 
-//7
+
+
 	$colourDB["orange"] = array(
 		array(7,7,7,7),
 		array(7,7,7,7)
@@ -64,29 +73,11 @@ $colourDB = array();
 
 
 
-//8
+
 	$colourDB["pink"] = array(
 		array(0,0,8,8,8),
-		array(0,0,8,0,0),
-		array(8,8,8,0,0)
+		array(8,8,8,8,8)
 		);
-
-
-//9
-	$colourDB["ppp"] = array(
-		array(9,9,9),
-		array(0,0,9),
-		array(0,0,9)
-		);
-
-
-//10
-	$colourDB["vvv"] = array(
-		array(10,10,10,10,10),
-		array(10,10,0,0,0)
-		);
-
-
 
 
 
