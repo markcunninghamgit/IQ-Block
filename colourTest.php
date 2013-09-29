@@ -1,6 +1,5 @@
 <?php
-include_once "colours.php";
-include_once "colourFunctions.php";
+include_once "functions.php";
 
 $allColoursUnique = array();
 $allColoursJson = array();
@@ -50,20 +49,4 @@ foreach ($allColoursUnique as $key => $value)
 	echo "key: $key\n";
 }
 
-/*
-printColour($pink);
-
-$pink = rotateColour($pink);
-printColour($pink);
-
-
-$pink = rotateColour($pink);
-printColour($pink);
-
-$pink = rotateColour($pink);
-printColour($pink);
-
-$pink = rotateColour($pink);
-printColour($pink);
-*/
 ?>
