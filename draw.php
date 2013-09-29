@@ -1,6 +1,6 @@
 <?php
-include_once "colours.php";
-include_once "colourFunctions.php";
+include_once "functions.php";
+
 $myBlock = blankBlock();
 
 
@@ -45,76 +45,6 @@ printBlock($myBlock);
 $colour = rotateColour($colourDB["yellow"],3);
 $myBlock = addShape($myBlock,$colour);
 printBlock($myBlock);
-
-
-
-
-
-
-
-
-
-/*
-	add an already rotated and flipped shape to the block
-*/
-function addShape($block,$shape)
-{
-	/*
-	get next free spot in block
-	get left top cornor of shape
-
-	*/
-	$freeSlot = findLeftTopSquare($block,false);
-	$startingShapePoint = findLeftTopSquare($shape);
-
-	/*
-		Loop through shape. 
-			get shape square loc based on starting square
-			if shape loc on block is free (based on freeslot to start from)
-				place part of shape on block
-			if not, return -1
-	*/
-	$rowCount = count($shape);
-	$columnCount = count($shape[0]);
-
-	//Loop around shape squares
-	for ($i=0; $i<$rowCount; $i++)
-	{
-		for ($j=0; $j < $columnCount; $j++)
-		{
-			//shape square isn't taken, don't try place on block
-			if ($shape[$i][$j] == 0)
-			{
-				continue;
-			}
-
-			//Purposly made I and J instead of x and y as [i][j] is more similar to j,i on a math graph
-			$blockI = $freeSlot[0] - $startingShapePoint[0] + $i;
-			$blockJ = $freeSlot[1] + $j;
-			//Check if shape is trying to be placed outside of block bounds
-			if (($blockI > 8 or $blockI < 0) or ($blockJ > 8 or $blockJ <0))
-			{
-				throw new Exception (" shape outside of block bounds, failied to add shape");
-			}
-			
-			//Block pos is empty? Place the square
-			if ($block[$blockI][$blockJ] == 0)
-			{
-				$block[$blockI][$blockJ] =$shape[$i][$j];
-			}
-			else
-			{
-				throw new Exception ("block spot is taken, cannot add shape here. there is an" . $block[$blockI][$blockJ]  . "here " 
-				. "Loc, i:$i, j: $j");
-			}
-		}
-	}
-	
-	return $block;
-}
-
-
-
 
 /*
 	Searches for the (left most) then (top most) square. 
