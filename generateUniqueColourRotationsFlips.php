@@ -6,7 +6,9 @@ $allColoursJson = array();
 
 foreach ($colourDB as $colourName => $colour)
 {
-	//Get all 8 combos without cutting out duplicates
+	//Do this twice and flip shapes the second time
+
+	//Get all rotations and cut out duplications
 	for ($i=0; $i<4; $i++)
 	{
 		$jsonColour = json_encode(rotateColour($colour,$i));
@@ -23,8 +25,9 @@ foreach ($colourDB as $colourName => $colour)
 		}
 	}
 
+	
+	//Get all rotations with flipped colour
 	$colour  = flipColour($colour);	
-
 	for ($i=0; $i<4; $i++)
 	{
 		$jsonColour = json_encode(rotateColour($colour,$i));
@@ -47,6 +50,7 @@ echo "number of elements is " . count($allColoursUnique) . "\n";
 foreach ($allColoursUnique as $key => $value)
 {
 	echo "key: $key\n";
+	print_r($value);
 }
 
 ?>
