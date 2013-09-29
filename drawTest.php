@@ -18,17 +18,16 @@ foreach ($uniqueColours as $colourCycle1K => $colourCycle1V)
 		$block1=addShape($myBlock,$colourCycle1V['shape']);
 	}catch (Exception $e)
 	{
-	//	//echo "bad block1 add, skipping\n";
+		echo "bad block1 add, skipping\n";
 		continue;
 	}
 	$keys1 = array($colourCycle1V['colour'] => 1);
-	print_r($keys1);
 	printBlock($block1);
 	foreach ($uniqueColours as $colourCycle2K => $colourCycle2V)
 	{
 		if (isset($keys1[$colourCycle2V['colour']]))
 		{
-			//echo "caught already done on " . $colourCycle2V['colour'] . "\n";
+			echo "b2 caught already done on " . $colourCycle2V['colour'] . "\n";
 			continue;
 		}
 		$keys2=$keys1;
@@ -39,33 +38,33 @@ foreach ($uniqueColours as $colourCycle1K => $colourCycle1V)
 			$block2=addShape($block2,$colourCycle2V['shape']);
 		}catch (Exception $e)
 		{
-			//echo "bad block2 add, skipping\n";
+			echo "bad block2 add, skipping\n";
 			continue;
 		}
 		printBlock($block2);
-		die();
-		continue;
 
 		foreach ($uniqueColours as $colourCycle3K => $colourCycle3V)
 		{
 			if (isset($keys2[$colourCycle3V['colour']]))
 			{
-				//echo "caught already done on " . $colourCycle2V['colour'] . "\n";
+				echo "b3 caught already done on " . $colourCycle3V['colour'] . "\n";
 				continue;
 			}
+			
 			$keys3=$keys2;
 			$keys3[$colourCycle3V['colour']] = 1;
-			//echo "another cycle3\n";
+			echo "another cycle3" . $colourCycle3V['colour'] . "\n";
 			$block3 = $block2;
 			try {
 				$block3=addShape($block3,$colourCycle3V['shape']);
 			}catch (Exception $e)
 			{
-				//echo "bad block3 add, skipping\n";
+				echo "bad block3 add, skipping\n";
 				continue;
 			}
 			
-			//printBlock($block3);
+			printBlock($block3);
+			die();
 
 			foreach ($uniqueColours as $colourCycle4K => $colourCycle4V)
 			{
@@ -76,7 +75,7 @@ foreach ($uniqueColours as $colourCycle1K => $colourCycle1V)
 				}
 				$keys4=$keys3;
 				$keys4[$colourCycle4V['colour']] = 1;
-				echo "another cycle4\n";
+				//echo "another cycle4\n";
 				$block4 = $block3;
 				try {
 					$block4=addShape($block4,$colourCycle4V['shape']);
@@ -86,7 +85,8 @@ foreach ($uniqueColours as $colourCycle1K => $colourCycle1V)
 					continue;
 				}
 				
-				printBlock($block4);
+				//printBlock($block4);
+
 
 				foreach ($uniqueColours as $colourCycle5K => $colourCycle5V)
 				{
@@ -168,7 +168,6 @@ foreach ($uniqueColours as $colourCycle1K => $colourCycle1V)
 									//echo "bad block8 add, skipping\n";
 									continue;
 								}
-								
 								printBlock($block8);
 							}//end block8
 						}//end block7

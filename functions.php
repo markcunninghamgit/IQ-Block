@@ -97,7 +97,7 @@ function addShape($block,$shape)
 			$blockI = $freeSlot[0] - $startingShapePoint[0] + $i;
 			$blockJ = $freeSlot[1] + $j;
 			//Check if shape is trying to be placed outside of block bounds
-			if (($blockI > 8 or $blockI < 0) or ($blockJ > 8 or $blockJ <0))
+			if (($blockI > 7 or $blockI < 0) or ($blockJ > 7 or $blockJ <0))
 			{
 				throw new Exception (" shape outside of block bounds, failied to add shape");
 			}
