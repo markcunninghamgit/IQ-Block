@@ -1,4 +1,5 @@
 <?php
+
 require_once "colours.php";
 
 function rotateColour($colour,$timesToRotate=1)
@@ -171,6 +172,25 @@ function blankBlock()
 	return $block;
 }
 
+
+/*
+	Print block for terminal with colours
+	uses terminal colour codes
+*/
+function printBlockPlain($blockToPrint)
+{
+	for ($i=0; $i< 8; $i++)
+	{
+		for ($j=0; $j< 8; $j++)
+		{
+			echo $blockToPrint[$i][$j]. " ";
+		}
+		echo "\r\n";
+	}
+	echo "\r\n";
+}
+
+
 /*
 	Print block for terminal with colours
 	uses terminal colour codes
@@ -227,4 +247,59 @@ function printBlock($blockToPrint)
 	}
 	echo "\r\n";
 }
+
+/*
+	For all colours
+	  Gen list all rotation/flip states
+	remove duplicates (colour could be the same thing flipped or rotated)
+	return massive list of all possabilities
+*/
+function generateUniqueColours()
+{
+	global $colourDB;
+	$allColoursUnique = array();
+	$allColoursJson = array();
+
+	foreach ($colourDB as $colourName => $colour)
+	{
+		//Do this twice and flip shapes the second time
+
+		//Get all rotations and cut out duplications
+		for ($i=0; $i<4; $i++)
+		{
+			$jsonColour = json_encode(rotateColour($colour,$i));
+			$duplicateID = array_search($jsonColour,$allColoursJson);
+			if ($duplicateID === false)
+			{
+				$allColoursUnique["c-$colourName-r$i-f-n"] = array("colour" => $colourName, "shape" =>  rotateColour($colour,$i));
+				$allColoursJson["c-$colourName-r$i-f-n"] = $jsonColour;
+			}
+			else
+			{
+				//echo "DEBUG: c-$colourName-r$i-f-n is a duplicate of $duplicateID\n";
+				//echo "DEBUG: first: " . $jsonColour . "\nSecond: " . $allColoursJson[$duplicateID] . "\n";
+			}
+		}
+
+		
+		//Get all rotations with flipped colour
+		$colour  = flipColour($colour);	
+		for ($i=0; $i<4; $i++)
+		{
+			$jsonColour = json_encode(rotateColour($colour,$i));
+			$duplicateID = array_search($jsonColour,$allColoursJson);
+			if ($duplicateID === false)
+			{
+				$allColoursUnique["c-$colourName-r$i-f-y"] =  array("colour" => $colourName, "shape" => rotateColour($colour,$i));
+				$allColoursJson["c-$colourName-r$i-f-y"] = $jsonColour;
+			}
+			else
+			{
+				//echo "DEBUG: c-$colourName-r$i-f-n is a duplicate of $duplicateID\n";
+			}
+		}
+	}
+	return $allColoursUnique;
+}
+
 
