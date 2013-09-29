@@ -1,5 +1,10 @@
 <?php
 include_once "functions.php";
+/*
+	Generates and draws a known combination of shapes that is valid
+	prints block each time we add a shape
+	run in terminal for terminal colours
+*/
 
 $myBlock = blankBlock();
 printBlock($myBlock);
