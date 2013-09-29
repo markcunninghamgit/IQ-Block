@@ -119,7 +119,7 @@ function addShape($block,$shape)
 /*
 	Searches for the (left most) then (top most) square. 
 	Used for: shapes + blocks
-	returns array of i,j elements of shape array where square is
+	returns array of 2 values: i,j coordinates of shape array where square is
 */
 function findLeftTopSquare($shape, $taken = true)
 {
