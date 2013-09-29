@@ -2,8 +2,6 @@
 include_once "functions.php";
 
 $myBlock = blankBlock();
-
-
 printBlock($myBlock);
 
 
@@ -25,6 +23,7 @@ $colour = rotateColour($colourDB["darkPurple"],1);
 $myBlock = addShape($myBlock,$colour);
 printBlock($myBlock);
 
+
 $colour = rotateColour($colourDB["darkGreen"],1);
 $myBlock = addShape($myBlock,$colour);
 printBlock($myBlock);
@@ -38,8 +37,6 @@ printBlock($myBlock);
 $colour = rotateColour($colourDB["blue"],1);
 $myBlock = addShape($myBlock,$colour);
 printBlock($myBlock);
-
-
 
 
 $colour = rotateColour($colourDB["yellow"],3);
